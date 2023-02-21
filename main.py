@@ -3,6 +3,9 @@ import json
 
 app = Flask(__name__)
 
+@app.route("/")
+def hello_api_consumer():
+    return "<p>Hello, Api consumer!</p>"
 
 @app.route('/getsampledata', methods=['GET'])
 def get_sample_data():
